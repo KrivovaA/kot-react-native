@@ -7,6 +7,10 @@ export default styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  containerTransportsList: {
+    flex: 1,
+    backgroundColor: '#2B2934',
+  },
   textDark: {
     color: '#74747E'
   },

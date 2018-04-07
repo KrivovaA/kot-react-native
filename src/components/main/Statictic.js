@@ -1,14 +1,25 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React, { Component } from 'react';
+import {
+  Text,
+  View
+} from 'react-native';
 import styles from '../../styles/main';
 
-export default class CircleTransportInfo extends React.Component {
+class Statistic extends Component {
   render() {
     return (
-      <View style={styles.circle}>
-        2
+      <View style={styles.container}>
+        <Text style={styles.textLight}>
+          THIS IS THE STATISTIC COMPONENT!
+        </Text>
       </View>
     );
   }
 }
 
+
+Statistic.navigationOptions = {
+  drawer: {}
+};
+
+export default Statistic
