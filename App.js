@@ -19,7 +19,7 @@ const store = createStore(reducers, initialState);
 
 
 export const App = DrawerNavigator({
-  Главная: { screen: Table },
+  Главная: { screen: UsersPage },
   Транспорт: { screen: TransportListPage },
   Пользователи: { screen: UsersPage },
   Настройки: { screen: SettingsPage }

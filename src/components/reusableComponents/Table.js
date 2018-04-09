@@ -1,16 +1,6 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import styles from '../../styles/main';
-import users from '../../data/users';
-//  {id:'1', Login: 'Admin', Password: 'Admin', Gender: 'm', Phone: '+79999999999', Email: 'admin@kot.ru', LastVisit: 'Fri Nov 11 2011 00:00:00'},
-
-const header = [
-  {title: 'Логин', entity: 'Login'},
-  {title: 'Пол', entity: 'Gender'},
-  {title: 'Телефон', entity: 'Phone'},
-  {title: 'Email', entity: 'Email'},
-  {title: 'Последний визит', entity: 'LastVisit'},
-];
 
 class CellHeader extends React.Component {
   render() {
@@ -26,28 +16,35 @@ class Cell extends React.Component {
   render() {
     return (
       <View style={styles.cell}>
-        <Text style={styles.cellText}>{this.props.cell.title}</Text>
+        <Text style={styles.cellText}>{this.props.cell}</Text>
       </View>
     );
   }
 }
 
+class Column extends React.Component {
+  render() {
+    return (<Cell cell={this.props.user[this.props.entity]}/>);
+  }
+}
 
 class Table extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.textLight}>Таблица с пользователями</Text>
-        <View style={styles.containerTable}>
-          {header.map((item) => {
-            return <CellHeader cell={item}/>
+        <ScrollView horizontal={true}>
+          {this.props.header.map((item) => {
+            return (<View key={`table-${item.id}`}>
+              <CellHeader cell={item}/>
+              <View>
+                {this.props.users.map((user) => {
+                  return <Column entity={item.entity} user={user} key={`column-key${item.id}-${user.id}`}/>
+                })}
+              </View>
+            </View>)
           })}
-        </View>
-        <View style={styles.containerTable}>
-          {header.map((item) => {
-            return <Cell cell={item}/>
-          })}
-        </View>
+        </ScrollView>
+
       </View>
     );
   }

@@ -7,7 +7,7 @@ class SettingsPage extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.textLight}>
-          This is the settings page!
+          В разработке
         </Text>
       </View>
     );

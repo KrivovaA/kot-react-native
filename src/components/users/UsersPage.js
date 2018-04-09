@@ -2,17 +2,22 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import styles from '../../styles/main';
 import users from '../../data/users';
-//  {id:'1', Login: 'Admin', Password: 'Admin', Gender: 'm', Phone: '+79999999999', Email: 'admin@kot.ru', LastVisit: 'Fri Nov 11 2011 00:00:00'},
+import Table from '../reusableComponents/Table';
 
+const header = [
+  {id:'1', title: 'Логин', entity: 'Login'},
+  {id:'2', title: 'Пол', entity: 'Gender'},
+  {id:'3', title: 'Телефон', entity: 'Phone'},
+  {id:'4', title: 'Email', entity: 'Email'},
+  {id:'5', title: 'Последний визит', entity: 'LastVisit'},
+];
 
 class UsersPage extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.textLight}>Table</Text>
-        <View style={styles.cellHeader}>
-          <Text style={styles.cellHeaderText}>Table</Text>
-        </View>
+        <Text style={styles.textLight}>Таблица пользователей</Text>
+        <Table users={users} header={header}/>
       </View>
     );
   }

@@ -83,11 +83,11 @@ export default styles = StyleSheet.create({
   },
   cellHeaderText: {
     color: 'white',
-    fontSize: 14
+    fontSize: 16
   },
   cellText: {
-    color: '#525460',
-    fontSize: 14
+    color: 'white',
+    fontSize: 16
   },
   cell: {
     borderWidth: 1,
