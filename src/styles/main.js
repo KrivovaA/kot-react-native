@@ -6,13 +6,30 @@ export default styles = StyleSheet.create({
     backgroundColor: '#2B2934',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: 20
   },
   containerTransportsList: {
+    paddingTop: 10,
     flexDirection: 'row',
     flexWrap: 'wrap',
     backgroundColor: '#2B2934',
     justifyContent: 'space-around'
-},
+  },
+  containerTable: {
+    flex: 1,
+    padding: 16,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    backgroundColor: '#2B2934'
+  },
+  head: {
+    height: 40,
+    backgroundColor: '#2B2934'
+  },
+  text: {
+    color: 'white',
+    margin: 6
+  },
   containerTransportsListScroll: {
     padding: 10,
     flex: 1,
@@ -58,7 +75,24 @@ export default styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 5,
     width: 50,
-    // height: 16
+  },
+  cellHeader: {
+    borderWidth: 1,
+    borderColor: '#525460',
+    backgroundColor: '#2B2934'
+  },
+  cellHeaderText: {
+    color: 'white',
+    fontSize: 14
+  },
+  cellText: {
+    color: '#525460',
+    fontSize: 14
+  },
+  cell: {
+    borderWidth: 1,
+    borderColor: '#525460',
+    backgroundColor: '#2B2934'
   }
 });
 // #453d09

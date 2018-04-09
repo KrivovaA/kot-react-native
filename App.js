@@ -11,6 +11,7 @@ import { DrawerNavigator } from 'react-navigation';
 import TransportListPage from './src/components/transports/TransportListPage';
 import SettingsPage from './src/components/settings/SettingsPage';
 import UsersPage from './src/components/users/UsersPage';
+import Table from './src/components/reusableComponents/Table';
 
 
 const initialState = {};
@@ -18,7 +19,7 @@ const store = createStore(reducers, initialState);
 
 
 export const App = DrawerNavigator({
-  Главная: { screen: MainPage },
+  Главная: { screen: Table },
   Транспорт: { screen: TransportListPage },
   Пользователи: { screen: UsersPage },
   Настройки: { screen: SettingsPage }
