@@ -4,7 +4,6 @@ import styles from '../../styles/main';
 
 export default class CircleTransportInfo extends React.Component {
   render() {
-    // console.log(this.props);
     return (
       <View style={styles.circle}>
         <Text style={styles.textCircle}>

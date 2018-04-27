@@ -7,6 +7,21 @@ export default styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  settingsContainer: {
+    paddingTop: 40,
+    flex: 1,
+    backgroundColor: '#2B2934',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    padding: 3
+  },
+  mainContainer: {
+    flex: 1,
+    backgroundColor: '#2B2934',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingTop: 40
+  },
   containerTransportsList: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -57,8 +72,43 @@ export default styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 5,
-    width: 50,
-    // height: 16
+    width: 50
+  },
+  chartBlock: {
+    backgroundColor: '#eb1d65',
+    width: 42,
+    height: 10,
+    margin: 1
+  },
+  chartTime: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-around',
+  },
+  chartBody: {
+    borderColor: '#4d4c51',
+    borderBottomWidth: 2,
+  },
+  chartOut: {
+    width: '100%',
+  },
+  chartColumn: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-around'
+  },
+  time: {
+    color: '#9da1a2',
+  },
+  workingInfo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around'
+  },
+  workingInfoData: {
+    flexDirection: 'column',
+    alignItems: 'center',
   }
 });
 // #453d09
