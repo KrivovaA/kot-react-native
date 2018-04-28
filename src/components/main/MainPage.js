@@ -1,14 +1,18 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import styles from '../../styles/main';
+import Chart from './chart/Chart';
+import WorkingInfo from './WorkingInfo';
 
 class MainPage extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.mainContainer}>
         <Text style={styles.textLight}>
-          This is the main page!
+          Активность
         </Text>
+        <WorkingInfo/>
+        <Chart />
       </View>
     );
   }
