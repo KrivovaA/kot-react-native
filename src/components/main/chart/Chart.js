@@ -14,8 +14,8 @@ export default class Chart extends React.Component {
 
   addBlockToChart(count) {
     let indents = [];
-    for (let i = 0; i < Math.ceil(count/PieceOfChart); i++) {
-      indents.push(<ChartBlock key={`chart-block-${count/PieceOfChart}`}/>);
+    for (let i = 0; i < Math.ceil(count/this.props.screenProps.countInBlock); i++) {
+      indents.push(<ChartBlock />);
     }
     return indents;
   }
