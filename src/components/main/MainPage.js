@@ -6,13 +6,14 @@ import WorkingInfo from './WorkingInfo';
 
 class MainPage extends React.Component {
   render() {
+    //console.log(this.props)
     return (
       <View style={styles.mainContainer}>
         <Text style={styles.textLight}>
           Активность
         </Text>
         <WorkingInfo/>
-        <Chart />
+        <Chart {...this.props}/>
       </View>
     );
   }
